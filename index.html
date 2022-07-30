@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <style>
+            h1{background-color:deeppink;text-align: center;color:white;}
+            span{color: blueviolet;font-size: 20px}
+            .danger{color:red;}
+            p{color:darkturquoise;text-align: center}
+            hr{border-top: 3px dashed green;}
+        </style>
+        <script>
+            var colors = ["Violet", "Indigo", "Blue", "Green", "Yellow", "Orange", "Red"];  
+  
+            // destructuring assignment  
+            var[color1, color2, color3,color4,color5,color6,color7] = colors;  
+    
+            console.log(color1); // Violet  
+            console.log(color2); // Indigo  
+            console.log(color3); // Blue  
+            console.log(color4); // Green
+            console.log(color5); // Yellow
+            console.log(color6); // Orange
+            console.log(color7); // Red
+
+            var lights = ["Violet", "Indigo", "Blue", "Green", "Yellow", "Orange", "Red"];  
+  
+            // destructuring assignment  
+            var[light1, ,light3, ,light5] = lights; //Leave space for unpick elements  
+            console.log(light1); // Violet  
+            console.log(light3); // Blue  
+            console.log(light5); // Yellow  
+
+            var x = 100, y = 200;  
+            [x, y] = [y, x];  
+            
+            console.log(x); // 200  
+            console.log(y); // 100 
+            console.log("hello");
+
+            function array() {  
+                return [100, 200, 300];  
+            }  
+   
+            var [a, b, c] = array();  
+   
+            console.log(a); // 100  
+            console.log(b); // 200  
+            console.log(c); // 300 
+        </script>
+    </head>
+    <body>
+        <h1>Array destructuring In Javascript</h1>
+        <p>
+                var colors = ["Violet", "Indigo", "Blue", "Green", "Yellow", "Orange", "Red"];  <br /> 
+  
+                // destructuring assignment  <br />
+                var[color1, color2, color3,color4,color5,color6,color7] = colors;  <br />
+        
+                console.log(color1); // <span>Violet </span> <br />
+                console.log(color2); // <span>Indigo  </span><br />
+                console.log(color3); // <span>Blue  </span><br />
+                console.log(color4); // <span>Green</span><br />
+                console.log(color5); // <span>Yellow</span><br />
+                console.log(color6); // <span>Orange</span><br />
+                console.log(color7); // <span>Red</span><br />
+    
+        </p>
+        <hr></hr>
+        <p>
+                var lights = ["Violet", "Indigo", "Blue", "Green", "Yellow", "Orange", "Red"];  <br />
+  
+                // destructuring assignment  <br />
+                var[light1, ,light3, ,light5] = lights; //Leave space for unpick elements  <br />
+                console.log(light1); // <span> Violet </span> <br />
+                console.log(light3); // <span>Blue </span> <br />
+                console.log(light5); // <span>Yellow </span> <br />
+                console.log(light2); // <span class="danger">Uncaught ReferenceError: light2 is not defined</span><br />
+                console.log(light4); // <span class="danger">Uncaught ReferenceError: light2 is not defined</span><br />
+        </p>
+        <hr></hr>
+        <h1>Swapping Variables</h1>
+        <p>
+                var x = 100, y = 200;  <br />
+                [x, y] = [y, x];  <br /><br /><br />
+                
+                console.log(x); //<span> 200  </span> <br />
+                console.log(y); // <span>100</span> <br />
+        </p>
+        <hr></hr>
+        
+        <h1>Parsing returned array from functions</h1>
+        <p>
+                function array() {  <br />
+                    return [100, 200, 300];<br />  
+                }  <br />
+       
+                var [a, b, c] = array();  <br />
+       
+                console.log(a); // <span>100</span>  <br />
+                console.log(b); // <span>200</span>  <br />
+                console.log(c); // <span>300</span>  <br />
+        </p>
+    </body>
+</html>
